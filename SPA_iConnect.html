@@ -1,27 +1,38 @@
 <!DOCTYPE html>
+
 <html>
-<head lang="en">
+<head>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    <meta charset="UTF-8">
-    <title>iConnect - Connecting HSBC</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="js/MyScript.js">
+
+    </script>
+    <script>
+        angular.bootstrap(document.getElementById("App2"),['namesList']);
+    </script>
+
 </head>
 <body>
-
-<div class='container'>
-    <div class="row">
-        <img height="4%" width="6%" src="Images/images.png" alt="HSBC"/>
+<div id="App1" ng-app="technologyCart" ng-controller="technologyController">
+    <h3>Technologies</h3>
+    <div ng-repeat="item in items">
+        {{item.name}}
+        <span class="badge">{{item.rank}}</span>
+        <span class="glyphicon glyphicon-ok" ng-click="update($index,true);"></span>
+        <span class="glyphicon glyphicon-remove" ng-click="update($index, false);"></span>
+        </span>
     </div>
-    <div class='row'>
-        <form>
-            <div class='span3 input-append' style="margin-top:20%; margin-left:20%">
-                <input class="span2" style="height:26px;width:60%;" id="main_search" type="text"
-                        placeholder="Looking for Help? Start typing your question / technology">
-                <input class="btn btn-large btn-primary"  type="button" value="search">
-            </div>
-
+    <div ng-controller="projectController">
+       <h2> Projects</h2>
+    <div ng-repeat="item in projects">
+        <form role="form">
+            <label>{{item.name}}</label>
+            <textarea class="form-control">{{item.ProjectDetails}}</textarea>
         </form>
     </div>
 </div>
 
+</div>
 </body>
 </html>
