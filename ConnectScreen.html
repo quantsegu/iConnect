@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Connecting HSBC</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <style>
+        .navbar .divider-vertical {
+            height: 50px;
+            margin: 0 9px;
+            border-right: 1px solid #ffffff;
+            border-left: 1px solid #f2f2f2;
+        }
+
+        .navbar-inverse .divider-vertical {
+            border-right-color: black;
+            border-left-color: black;
+        }
+
+        @media (max-width: 767px) {
+            .navbar-collapse .nav > .divider-vertical {
+                display: none;
+            }
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .cover-container {
+            height: 100px;
+            width: 100%;
+            white-space: nowrap;
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+        .cover-item {
+            position: relative;
+            display: inline-block;
+            margin: 4px 4px;
+            box-shadow: 2px 2px 4px #bbb;
+            width: 80px;
+            height: 80px;
+            vertical-align: bottom;
+            background-position: top left;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body ng-app="iConnectApplication">
+<div class="container">
+    <nav class="navbar navbar-default" style="background-color: white;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#"><img src="Images/images.png" height="5%" width="10%" class="image-circle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="divider-vertical"/>
+                <a href="#"><img src="Images/images.png" height="5%" width="10%" class="image-circle"></a>
+            </div>
+
+            <div id="navbar" class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li><a class="glyphicon glyphicon-user" href="#"> Virendrasinh K Gohil</span></a></li>
+                    <li class="divider-vertical"/>
+                <li class="dropdown"  >
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-cog"></span></a>
+                    <ul class="dropdown-menu" style="width: auto;">
+                        &nbsp;
+                        &nbsp;
+                        <li style="font-size:20px;" class="glyphicon glyphicon-glass"></li>
+                        &nbsp;
+                        &nbsp;
+                        <li style="font-size:20px;" class="glyphicon glyphicon-earphone"></li>
+                        &nbsp;
+                        &nbsp;
+                        <li style="font-size:20px;" class="glyphicon glyphicon-envelope"></li>
+                    </ul>
+                </li>
+                    <li><a class="glyphicon glyphicon-tasks" href=""><span class="badge">12</span> </a></li>
+                    <li><a class="glyphicon glyphicon-off" href=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class='row'>
+
+            <div class="input-group" style="margin-top:20%; margin-left:20%; margin-right:20%;">
+                <input class="form-control"
+                       placeholder="Looking for Help? Start typing your question / technology">
+                <span class="input-group-btn">
+                    <button style="background-color:royalblue;color:white;" class="btn btn-default" type="button">Search</button>
+                </span>
+            </div>
+
+    </div>
+    <div style="margin-top:4%; margin-left:30%; margin-right:30%;">
+        <nav class="navbar navbar-default" style="background-color: white;border: none;">
+            <div class="container">
+                <div id="contactslist" class="navbar-header">
+                    <ul class="nav nav-pills" role="tablist">
+                        <li class="active"> <a href="#ucontact">People who contacted me<span class="badge">10</span></a></li>
+                        <li><a href="#icontact" class="">People whom i contaced</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="contactlist" style="margin-top:4%; margin-left:30%; margin-right:30%;" class="row-fluid">
+        <div  class="col-lg-12 col-md-10 ">
+        <div id="ucontact" class="cover-container">
+            <img class="cover-item img-circle img-responsive" src="Images/Vin_Diesel2.jpg"/>
+            <img class="cover-item img-circle img-responsive" src="Images/Viru.jpg"/>
+            <img class="cover-item img-circle img-responsive" src="Images/Ricky.jpg"/>
+            <img class="cover-item img-circle img-responsive" src="Images/Sachin-Tendulkar.jpg"/>
+            <img class="cover-item img-circle img-responsive" src="Images/virat-kohli1.jpg"/>
+            <img class="cover-item img-circle img-responsive" src="Images/virat-kohli1.jpg"/>
+            <img class="cover-item img-circle img-responsive" src="Images/virat-kohli1.jpg"/>
+    </div>
+            <div id="icontact" class="cover-container">
+                <img class="cover-item img-circle img-responsive" src="Images/Vin_Diesel2.jpg"/>
+                <img class="cover-item img-circle img-responsive" src="Images/Viru.jpg"/>
+                <img class="cover-item img-circle img-responsive" src="Images/Ricky.jpg"/>
+                <img class="cover-item img-circle img-responsive" src="Images/Sachin-Tendulkar.jpg"/>
+                <img class="cover-item img-circle img-responsive" src="Images/virat-kohli1.jpg"/>
+                <img class="cover-item img-circle img-responsive" src="Images/virat-kohli1.jpg"/>
+                <img class="cover-item img-circle img-responsive" src="Images/virat-kohli1.jpg"/>
+            </div>
+
+            </div>
+</div>
+</body>
+</html>

@@ -26,15 +26,17 @@
         </span>
     </div>
     <div ng-controller="projectController">
-       <h2> Projects</h2>
-    <div ng-repeat="item in projects">
-        <form role="form">
-            <label>{{item.name}}</label>
-            <textarea class="form-control">{{item.ProjectDetails}}</textarea>
-        </form>
+        <h2> Projects</h2>
+        <div ng-repeat="item in projects">
+            <form role="form">
+                <label>{{item.name}}</label>
+                <textarea class="form-control">{{item.ProjectDetails}}</textarea>
+                <ul id="my-sort" class="sortable" ng-model="projectTechnologies">
+                    <li ng-repeat="i in item.techs">{{i.tech}}</li>
+                </ul>
+            </form>
+        </div>
     </div>
-</div>
-
 </div>
 </body>
 </html>
